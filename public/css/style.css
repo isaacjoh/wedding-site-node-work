@@ -1,0 +1,325 @@
+/* Extra small devices (phones, less than 768px)
+Small devices (tablets, 768px and up)
+Medium devices (desktops, 992px and up)
+Large devices (large desktops, 1200px and up) */
+
+@media (max-width: 991px) {
+  .wedding-details .wedding-details-info {
+    height: 50%;
+  }
+}
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+html,
+body {
+  background-color: white;
+  color: white;
+}
+
+html,
+body,
+.container {
+  height: 100%;
+}
+
+body {
+  font-weight: 400;
+  font-size: 14px;
+  overflow-x: hidden;
+}
+
+a {
+  color: rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  outline: none;
+}
+
+a:hover,
+a:focus {
+  color: white;
+}
+
+.loading::before,
+.loading::after {
+  content: "";
+  position: fixed;
+  z-index: 1000;
+}
+
+.loading::before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #2c2d31;
+}
+
+.loading::after {
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  margin: -20px 0 0 -20px;
+  border: 8px solid #383a41;
+  border-bottom-color: #565963;
+  border-radius: 50%;
+  animation: animLoader 0.8s linear infinite forwards;
+}
+
+.countdown-outer-container {
+  margin-bottom: 50px;
+}
+
+.countdown-container:first-child {
+  margin-right: 40px;
+}
+
+.countdown span {
+  font-size: 2em;
+}
+
+.countdown-unit {
+  font-size: 1em;
+}
+
+.countdown-container {
+  display: inline-flex;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  font-size: 30px;
+  background: transparent;
+  border: 1px solid #FCE8EC;
+  line-height: 150px;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.countdown-container p {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+  padding: 0 25px;
+}
+
+.splash-img {
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../images/splash-img.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.fadeIn {
+  animation: fadeInFromNone 2.5s ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInFromNone {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.rsvp-btn-container {
+  position: absolute !important;
+  align-self: flex-end;
+  bottom: 20% !important;
+  width: 220px;
+  height: 70px;
+}
+
+.splash-img-tint {
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #000000;
+  opacity: 0.5;
+}
+
+.wedding-form-page {
+  /* background-color: #B378D3; */
+  background-color: #006400;
+  height: 100%;
+}
+
+.wedding-details {
+  height: 100vh;
+  width: 100vw;
+  color: black;
+  background-color: #fbf6eb;
+}
+
+.wedding-details .wedding-details-info {
+  padding: 0 7%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+}
+
+.when-details h2 {
+  margin-top: 0;
+}
+
+.when-details h2 span {
+  border-bottom: 2px solid black;
+}
+
+.when-details p {
+  font-size: 2em;
+}
+
+.where-details {
+  margin-top: 50px;
+}
+
+.where-details h2 span {
+  border-bottom: 2px solid black;
+}
+
+.where-details p {
+  font-size: 2em;
+}
+
+.login-page-img {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../images/login-page-img.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
+  left: 0;
+  position: fixed;
+  right: 0;
+  z-index: 1;
+}
+
+.login-page {
+  color: #FCE8EC;
+}
+
+.login-page h1 {
+  margin-bottom: 30px;
+}
+
+.login-page-menu {
+  display: flex;
+  z-index: 2;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-page-tint {
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #000000;
+  opacity: 0.4;
+}
+
+.login-page-menu input {
+  border: 0;
+  border-bottom: 2px solid white;
+  background: transparent;
+}
+
+.login-page-menu p {
+  margin: 0;
+}
+
+.login-page input.input-submit {
+  display: none;
+}
+
+.login-page input {
+  width: 140px;
+  color: #FCE8EC;
+  font-size: 34px;
+  text-align: center;
+}
+
+.login-page input:focus {
+  outline: none;
+}
+
+.login-page .password-label {
+  font-size: 24px;
+  letter-spacing: 2px;
+  margin-right: 10px;
+}
+
+.map {
+  width: 100%;
+  height: 400px;
+  background-color: grey;
+  max-width: 740px;
+}
+
+.map-btn-container {
+  position: relative;
+  top: 50px;
+  width: 220px;
+  height: 70px;
+}
+
+.engagement-photos-grid {
+  position: relative;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.engagement-photos-grid .coming-soon {
+  position: relative;
+  top: -50px;
+  font-size: 2.5em;
+}

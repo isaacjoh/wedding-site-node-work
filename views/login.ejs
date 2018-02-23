@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Node Sample App</title>
+
+	<!-- CSS -->
+	<!-- load bootstrap and our own personal stylesheet -->
+	<link href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/superhero/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+<body>
+	<div class="login-page">
+		<div class="login-page-img"></div>
+		<div class="login-page-tint"></div>
+		<div class="login-page-menu">
+			<div class="countdown-outer-container">
+				<div class="countdown-container">
+					<p id="countdown-months" class="countdown">
+						<span></span>
+					</p>
+					<p class="countdown-unit">
+						<span>
+							months
+						</span>
+					</p>
+				</div>
+
+				<div class="countdown-container">
+					<p id="countdown-days" class="countdown">
+						<span></span>
+					</p>
+					<p class="countdown-unit">
+						<span>
+							days
+						</span>
+					</p>
+				</div>
+			</div>
+
+			<h1>Hayoung & Isaac's Wedding</h1>
+
+			<form method="post" action="/login">
+				<p>
+					<span class="password-label">PW:</span>
+					<input type="password" class="password" name="password" />
+					<input type="submit" class="input-submit" />
+				</p>
+			</form>
+		</div>
+	</div>
+
+	<script src="js/countdown.min.js"></script>
+	<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous"></script>
+	<script src="js/login.js"></script>
+</body>
+
+</html>

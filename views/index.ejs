@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Hayoung & Isaac's Wedding</title>
+
+	<!-- CSS -->
+	<!-- load bootstrap and our own personal stylesheet -->
+	<link href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/superhero/bootstrap.min.css" rel="stylesheet">
+	<link rel="shortcut icon" type="image/x-icon" href="icons/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/buttons.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<link rel="stylesheet" type="text/css" href="css/cs-select.css" />
+	<link rel="stylesheet" type="text/css" href="css/cs-skin-boxes.css" />
+	<link rel="stylesheet" type="text/css" href="css/timeline.css" />
+	<link rel="stylesheet" type="text/css" href="css/grid.css" />
+	<script src="js/modernizr.custom.js"></script>
+</head>
+
+<body class="loading">
+	<section class="home-page slide" data-section-name="home">
+		<div class="splash-img">
+			<div class="splash-img-tint"></div>
+			<div class="rsvp-btn-container">
+				<a class="rsvp-btn colored-btn" href="#wedding-form">
+					<span>
+						RSVP
+					</span>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="wedding-details slide" data-section-name="details">
+		<div class="col-xs-12 col-md-6 wedding-details-info">
+			<div class="when-details">
+				<h2>
+					<span>
+						WHEN
+					</span>
+				</h2>
+				<p>
+					Saturday
+				</p>
+				<p>
+					June 30, 2018
+				</p>
+			</div>
+
+			<div class="where-details">
+				<h2>
+					<span>
+						WHERE
+					</span>
+				</h2>
+				<p>
+					Seventh/Place
+				</p>
+				<p>
+					802 Mateo St
+				</p>
+				<p>
+					Los Angeles, CA 90021
+				</p>
+			</div>
+		</div>
+
+		<div class="col-xs-12 col-md-6 wedding-details-info">
+			<div id="map" class="map"></div>
+
+			<div class="map-btn-container">
+				<a class="map-btn colored-btn" href="javascript:void(0)" target="_blank">
+					<span>MAP</span>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="wedding-timeline slide" data-section-name="timeline">
+		<div class="container">
+			<h1 class="project-name">Wedding Day Timeline</h1>
+			<div id="timeline-container">
+				<div class="timeline-item">
+					<div class="timeline-icon">
+						<!-- insert icon here -->
+					</div>
+					<div class="timeline-content">
+						<h2>LOREM IPSUM DOLOR</h2>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, fac.
+						</p>
+					</div>
+				</div>
+
+				<div class="timeline-item">
+					<div class="timeline-icon">
+						<!-- insert icon here -->
+					</div>
+					<div class="timeline-content right">
+						<h2>LOREM IPSUM DOLOR</h2>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo. Maiores magnam modi ab libero praesentium bla.
+						</p>
+					</div>
+				</div>
+
+				<div class="timeline-item">
+					<div class="timeline-icon">
+						<!-- insert icon here -->
+					</div>
+					<div class="timeline-content">
+						<h2>LOREM IPSUM DOLOR</h2>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo. Maiores magnam modi ab libero praesentium bland.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="proposal-photos-grid slide" data-section-name="proposal">
+		<div>
+			<main>
+				<div class="content content--center">
+					<div class="grid grid--type-a">
+						<div class="grid__sizer"></div>
+						<div class="grid__item">
+							<a class="grid__link" href="javascript:void(0)">
+								<img class="grid__img" src="images/proposal/1.jpg" alt="Some image" />
+							</a>
+						</div>
+						<div class="grid__item">
+							<a class="grid__link" href="javascript:void(0)">
+								<img class="grid__img" src="images/proposal/2.jpg" alt="Some image" />
+							</a>
+						</div>
+						<div class="grid__item">
+							<a class="grid__link" href="javascript:void(0)">
+								<img class="grid__img" src="images/proposal/3.jpg" alt="Some image" />
+							</a>
+						</div>
+						<div class="grid__item">
+							<a class="grid__link" href="javascript:void(0)">
+								<img class="grid__img" src="images/proposal/4.jpg" alt="Some image" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+	</section>
+
+	<section class="engagement-photos-grid slide" data-section-name="engagement">
+		<div class="coming-soon">
+			Engagement photos coming soon!
+		</div>
+	</section>
+
+	<section class="wedding-form-page slide" data-section-name="rsvp">
+		<div class="container" id="wedding-form">
+			<div class="wedding-form fs-form-wrap" id="fs-form-wrap">
+				<form id="myform" class="fs-form fs-form-full" autocomplete="off" action="https://docs.google.com/forms/d/e/1FAIpQLSf6ajgQRFnHS5v13ivM1imuGPWUx0PEaM8XoPBJjmbe6ilySg/formResponse">
+					<ol class="fs-fields">
+						<li>
+							<label class="fs-field-label fs-anim-upper" for="q1">First and last name please!</label>
+							<input class="fs-anim-lower" id="q1" name="entry.2119593387" type="text" required/>
+						</li>
+						<li data-input-trigger>
+							<div name="entry.1705276704">
+								<label class="fs-field-label fs-anim-upper" for="q3">Will you be attending our wedding?</label>
+								<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
+									<span>
+										<input id="q3b" type="radio" name="entry.1705276704" value="Yes, I'll be there to celebrate with y'all!" required />
+										<label for="q3b" class="radio-yes">Yes! I will be there to celebrate with y'all!</label>
+									</span>
+									<span>
+										<input id="q3c" type="radio" name="entry.1705276704" value="No, unfortunately I cannot." />
+										<label for="q3c" class="radio-no">No, unfortunately I cannot.</label>
+									</span>
+								</div>
+							</div>
+						</li>
+						<li data-input-trigger>
+							<div name="entry.66188498">
+								<label class="fs-field-label fs-anim-upper" for="q3">If you are married, will your spouse be attending as well?</label>
+								<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
+									<span>
+										<input id="q5b" type="radio" name="entry.66188498" value="Yes" required />
+										<label for="q5b" class="radio-yes">Yes!</label>
+									</span>
+									<span>
+										<input id="q5c" type="radio" name="entry.66188498" value="No" />
+										<label for="q5c" class="radio-no">No!</label>
+									</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<label class="fs-field-label fs-anim-upper" for="q2">May we have your mailing address?</label>
+							<input class="fs-anim-lower" id="q2" name="entry.1869351217" type="email" required/>
+						</li>
+						<li>
+							<label class="fs-field-label fs-anim-upper" for="q4">Lastly, is there anything you would like us to know? Food allergies, etc.</label>
+							<input class="fs-anim-lower" id="q4" name="entry.1907914133" type="text" />
+						</li>
+					</ol>
+					<!-- /fs-fields -->
+					<button class="fs-submit" type="submit">Submit</button>
+				</form>
+				<!-- /fs-form -->
+			</div>
+			<!-- /fs-form-wrap -->
+		</div>
+	</section>
+
+	<script src="js/classie.js"></script>
+	<script src="js/selectFx.js"></script>
+	<script src="js/fullscreenForm.js"></script>
+	<script>
+		(function () {
+			var formWrap = document.getElementById('fs-form-wrap');
+
+			[].slice.call(document.querySelectorAll('select.cs-select')).forEach(function (el) {
+				new SelectFx(el, {
+					stickyPlaceholder: false,
+					onChange: function (val) {
+						document.querySelector('span.cs-placeholder').style.backgroundColor = val;
+					}
+				});
+			});
+
+			new FForm(formWrap, {
+				onReview: function () {
+					classie.add(document.body, 'overview'); // for demo purposes only
+				}
+			});
+		})();
+	</script>
+	<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	  crossorigin="anonymous"></script>
+	<script>
+		function initMap() {
+			var seventh_place = {
+				lat: 34.033493,
+				lng: -118.232001
+			};
+			var map = new google.maps.Map(document.getElementById('map'), {
+				zoom: 12,
+				center: seventh_place
+			});
+			var marker = new google.maps.Marker({
+				position: seventh_place,
+				map: map
+			});
+		}
+	</script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6MbK561lbp99AtY9dOloRCn6aJpsqJGY&callback=initMap">
+	</script>
+	<script src="js/imagesloaded.pkgd.min.js"></script>
+	<script src="js/masonry.pkgd.min.js"></script>
+	<script src="js/anime.min.js"></script>
+	<script src="js/scrollify.js"></script>
+	<script src="js/grid.js"></script>
+	<script src="js/index.js"></script>
+</body>
+
+</html>
