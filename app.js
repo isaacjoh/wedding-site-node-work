@@ -1,5 +1,5 @@
 var express = require('express');
-
+var cookie = require('cookie-session');
 var port = 8999;
 
 var app = express.createServer();
@@ -20,7 +20,7 @@ function checkAuth (req, res, next) {
 app.configure(function () {
 
 	app.use(express.cookieParser());
-	app.use(express.session({ secret: 'example' }));
+	app.use(cookie.session({ secret: 'example' }));
 	app.use(express.bodyParser());
 	app.use(checkAuth);
 	app.use(app.router);
