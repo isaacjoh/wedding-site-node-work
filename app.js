@@ -20,7 +20,7 @@ function checkAuth (req, res, next) {
 app.configure(function () {
 
 	app.use(express.cookieParser());
-	app.use(cookie.session({ secret: 'example' }));
+	app.use(cookie({ secret: 'example' }));
 	app.use(express.bodyParser());
 	app.use(checkAuth);
 	app.use(app.router);
