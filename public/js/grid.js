@@ -177,7 +177,9 @@
     //   $grid.masonry("layout");
     // });
 
-    $("img.lazyload").lazyload();
+    $("img.lazyload").lazyload({
+      skip_invisible: false
+    });
 
     $("img.lazyload").on("load", function () {
       masonry_update();
@@ -196,6 +198,8 @@
       });
     }
 
+    $(window).resize();
+    
     // Init GridLoaderFx.
     loaders.push(new GridLoaderFx(grid));
     // });

@@ -27,14 +27,13 @@ $(document).ready(function () {
 		'speedOut'		:	200, 
 		'overlayShow'	:	false
   });
-  
+
   $(".submit-btn").on("click", function (e) {
     // prevent redirect
   });
 });
 
 window.onload = function () {
-  console.log('loaded');
   // Remove loading class from body
   $("body").removeClass("loading");
 

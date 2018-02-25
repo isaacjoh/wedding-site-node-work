@@ -930,9 +930,9 @@ input[type="text"]::-ms-clear {
   }
 
   .fs-message-error {
-    bottom: 10em;
+    bottom: 2em;
     left: 0;
-    padding: 0 90px 0 2em;
+    padding: 0 90px 0 1em;
     width: 100%;
     font-size: 1.5em;
     -webkit-transform: translate3d(0, -5px, 0);
