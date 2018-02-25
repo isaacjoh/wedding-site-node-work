@@ -5,8 +5,6 @@ var port = 8999;
 var app = express.createServer();
 
 function checkAuth (req, res, next) {
-	console.log('checkAuth ' + req.url);
-
 	// don't serve /secure to those not logged in
 	// you should add to this list, for each and every secure url
 	if (req.url === '/secure' && (!req.session || !req.session.authenticated)) {
@@ -33,4 +31,3 @@ app.configure(function () {
 require('./lib/routes.js')(app);
 
 app.listen(process.env.PORT || port);
-console.log('Node listening on port %s', port);
