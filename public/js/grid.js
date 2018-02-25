@@ -190,8 +190,6 @@
     setTimeout(function() {
       $(".rsvp-btn").addClass("cool-color-effect");
     }, 2500);
-
-    console.log("all images loaded");
     // });
   }
 

@@ -3,6 +3,7 @@
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   padding-bottom: 30px;
+  height: auto;
 }
 
 .proposal-photos-grid .section-header {
