@@ -44,15 +44,7 @@ window.onload = function () {
   setTimeout(function () {
     $(".rsvp-btn").addClass("cool-color-effect");
   }, 2500);
-
-  var waypointWeddingDetails = new Waypoint({
-    element: document.getElementById("wedding-details"),
-    handler: function (direction) {
-      $(".map-btn").addClass("cool-color-effect");
-    },
-    offset: 100
-  });
-
+  
   var isMobile;
   checkMobile();
 
