@@ -1,13 +1,4 @@
-/* Extra small devices (phones, less than 768px)
-Small devices (tablets, 768px and up)
-Medium devices (desktops, 992px and up)
-Large devices (large desktops, 1200px and up) */
-
-@media (max-width: 991px) {
-  .wedding-details .wedding-details-info {
-    height: 50%;
-  }
-}
+@import url('https://fonts.googleapis.com/css?family=Rambla');
 
 *,
 *:after,
@@ -39,6 +30,7 @@ body,
 body {
   font-weight: 400;
   font-size: 14px;
+  font-family: 'Rambla';
   overflow-x: hidden;
 }
 
@@ -51,6 +43,12 @@ a {
 a:hover,
 a:focus {
   color: white;
+}
+
+.slide {
+  width: 100vw;
+  min-height: 100vh;
+  height: 100%;
 }
 
 .loading::before,
@@ -80,6 +78,20 @@ a:focus {
   animation: animLoader 0.8s linear infinite forwards;
 }
 
+.home-page h1 {
+  position: absolute;
+  z-index: 2;
+  left: 30%;
+  right: 0;
+  bottom: 0;
+  top: 25%;
+  height: 40px;
+  margin: 0 auto;
+  width: 450px;
+  font-size: 3.5em;
+  text-align: center;
+}
+
 .countdown-outer-container {
   margin-bottom: 50px;
 }
@@ -103,7 +115,7 @@ a:focus {
   border-radius: 50%;
   font-size: 30px;
   background: transparent;
-  border: 1px solid #FCE8EC;
+  border: 1px solid #fce8ec;
   line-height: 150px;
   text-align: center;
   flex-direction: column;
@@ -170,14 +182,14 @@ a:focus {
 }
 
 .wedding-form-page {
-  /* background-color: #B378D3; */
-  background-color: #006400;
-  height: 100%;
+  background-color: #FBF6EB;
+}
+
+.wedding-form-page .container {
+  overflow: hidden;
 }
 
 .wedding-details {
-  height: 100vh;
-  width: 100vw;
   color: black;
   background-color: #fbf6eb;
 }
@@ -193,7 +205,7 @@ a:focus {
 }
 
 .when-details h2 {
-  margin-top: 0;
+  margin: 0 0 24px;
 }
 
 .when-details h2 span {
@@ -206,6 +218,10 @@ a:focus {
 
 .where-details {
   margin-top: 50px;
+}
+
+.where-details h2 {
+  margin: 0 0 24px;
 }
 
 .where-details h2 span {
@@ -233,7 +249,7 @@ a:focus {
 }
 
 .login-page {
-  color: #FCE8EC;
+  color: #fce8ec;
 }
 
 .login-page h1 {
@@ -281,7 +297,7 @@ a:focus {
 
 .login-page input {
   width: 140px;
-  color: #FCE8EC;
+  color: #fce8ec;
   font-size: 34px;
   text-align: center;
 }
@@ -313,13 +329,118 @@ a:focus {
 .engagement-photos-grid {
   position: relative;
   color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
+  background-color: #FCE8EC;
+  overflow-x: hidden;
 }
 
 .engagement-photos-grid .coming-soon {
-  position: relative;
-  top: -50px;
-  font-size: 2.5em;
+  position: absolute;
+  top: calc(50% - 20px);
+  height: 40px;
+  font-size: 1.5em;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+}
+
+.height-auto {
+  height: auto !important;
+}
+
+/* Extra small devices (phones, less than 768px)
+Small devices (tablets, 768px and up)
+Medium devices (desktops, 992px and up)
+Large devices (large desktops, 1200px and up) */
+
+@media screen and (max-width: 991px) {
+  .slide {
+    height: auto;
+  }
+
+  .wedding-form-page {
+    height: 100%;
+  }
+
+  .home-page h1 {
+    left: 0;
+    top: 34%;
+  }
+
+  .wedding-details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .wedding-details .wedding-details-info-when {
+    height: 40%;
+    padding: 80px 0 60px;
+  }
+
+  .wedding-details .wedding-details-info-map {
+    height: 60%;
+    padding-bottom: 100px;
+  }
+
+  .coming-soon {
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .home-page h1 {
+    left: 0;
+    top: 25%;
+    width: 50%;
+    font-size: 2.8em;
+  }
+
+  .wedding-details .wedding-details-info-when {
+    height: 40%;
+    padding: 50px 0;
+  }
+
+  .wedding-form-page {
+    height: 100%;
+  }
+
+  .fs-form-overview .fs-fields input {
+    font-size: 20px;
+  }
+
+  .login-page h1 {
+    font-size: 36px;
+  }
+
+  .countdown-container {
+    width: 150px;
+    height: 150px;
+    font-size: 24px;
+  }
+
+  .countdown-container:first-child {
+    margin-right: 20px;
+  }
+
+  .splash-img {
+    background-position: 42% 50%;
+  }
+}
+
+@media screen and (max-width: 486px) {
+  .login-page h1 {
+    width: 80%;
+  }
+
+  .login-page input {
+    width: 100px;
+  }
+}
+
+@media screen and (max-height: 320px) {
+  .home-page h1 {
+    width: 80%;
+    font-size: 2.5em;
+  }
 }

@@ -1,12 +1,16 @@
-@import "https://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700";
-header:after, #timeline-container .timeline-item:after, header:before, #timeline-container .timeline-item:before {
-  content: '';
+header:after,
+#timeline-container .timeline-item:after,
+header:before,
+#timeline-container .timeline-item:before {
+  content: "";
   display: block;
   width: 100%;
   clear: both;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -20,14 +24,17 @@ a {
   text-decoration: none;
 }
 
-h1, h2, h3, h4 {
-  font-family: "Dosis", arial, tahoma, verdana;
+h1,
+h2,
+h3,
+h4 {
   font-weight: 500;
 }
 
-.project-name {
+.section-header {
+  color: black;
   text-align: center;
-  padding: 10px 0;
+  padding: 50px 0 30px;
 }
 
 header {
@@ -39,9 +46,8 @@ header {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
 }
 header .logo {
-  color: #FBF6EB;
+  color: #fbf6eb;
   float: left;
-  font-family: "Dosis", arial, tahoma, verdana;
   font-size: 22px;
   font-weight: 500;
 }
@@ -53,7 +59,6 @@ header .social {
   float: right;
 }
 header .social .btn {
-  font-family: "Dosis";
   font-size: 14px;
   margin: 10px 5px;
 }
@@ -72,7 +77,7 @@ header .social .btn {
   content: "";
   width: 3px;
   height: 100%;
-  background: #FBF6EB;
+  background: #fbf6eb;
   left: 50%;
   top: 0;
   position: absolute;
@@ -88,7 +93,7 @@ header .social .btn {
   position: relative;
 }
 #timeline-container .timeline-item .timeline-icon {
-  background: #FBF6EB;
+  background: #fbf6eb;
   width: 50px;
   height: 50px;
   position: absolute;
@@ -125,7 +130,7 @@ header .social .btn {
 }
 #timeline-container .timeline-item .timeline-content h2 {
   padding: 15px;
-  background: #FBF6EB;
+  background: #fbf6eb;
   color: black;
   margin: -20px -20px 0 -20px;
   font-weight: 300;
@@ -135,7 +140,7 @@ header .social .btn {
   border-radius: 3px 3px 0 0;
 }
 #timeline-container .timeline-item .timeline-content:before {
-  content: '';
+  content: "";
   position: absolute;
   left: 45%;
   top: 20px;
@@ -143,25 +148,25 @@ header .social .btn {
   height: 0;
   border-top: 7px solid transparent;
   border-bottom: 7px solid transparent;
-  border-left: 7px solid #FBF6EB;
+  border-left: 7px solid #fbf6eb;
 }
 #timeline-container .timeline-item .timeline-content.right {
   float: right;
 }
 #timeline-container .timeline-item .timeline-content.right:before {
-  content: '';
+  content: "";
   right: 45%;
   left: inherit;
   border-left: 0;
-  border-right: 7px solid #FBF6EB;
+  border-right: 7px solid #fbf6eb;
 }
 
 .btn {
   padding: 5px 15px;
   text-decoration: none;
   background: transparent;
-  border: 2px solid #FBF6EB;
-  color: #FBF6EB;
+  border: 2px solid #fbf6eb;
+  color: #fbf6eb;
   display: inline-block;
   position: relative;
   text-transform: uppercase;
@@ -174,10 +179,10 @@ header .social .btn {
   -moz-transition: background 0.3s ease;
   -ms-transition: background 0.3s ease;
   transition: background 0.3s ease;
-  -webkit-box-shadow: 2px 2px 0 #FBF6EB;
-  -moz-box-shadow: 2px 2px 0 #FBF6EB;
-  -ms-box-shadow: 2px 2px 0 #FBF6EB;
-  box-shadow: 2px 2px 0 #FBF6EB;
+  -webkit-box-shadow: 2px 2px 0 #fbf6eb;
+  -moz-box-shadow: 2px 2px 0 #fbf6eb;
+  -ms-box-shadow: 2px 2px 0 #fbf6eb;
+  box-shadow: 2px 2px 0 #fbf6eb;
 }
 .btn:hover {
   box-shadow: none;
@@ -191,7 +196,6 @@ header .social .btn {
 
 @media screen and (max-width: 768px) {
   #timeline-container {
-    margin: 30px;
     padding: 0px;
     width: 90%;
   }
@@ -202,11 +206,12 @@ header .social .btn {
     width: 90%;
     float: right;
   }
-  #timeline-container .timeline-item .timeline-content:before, #timeline-container .timeline-item .timeline-content.right:before {
+  #timeline-container .timeline-item .timeline-content:before,
+  #timeline-container .timeline-item .timeline-content.right:before {
     left: 10%;
     margin-left: -6px;
     border-left: 0;
-    border-right: 7px solid #FBF6EB;
+    border-right: 7px solid #fbf6eb;
   }
   #timeline-container .timeline-item .timeline-icon {
     left: 0;
@@ -215,5 +220,17 @@ header .social .btn {
 
 .wedding-timeline {
   color: black;
-  background-color: #FCE8EC;
+  background-color: #fce8ec;
+  height: auto;
+}
+
+.timeline-item img {
+  max-width: 100%;
+  width: 80%;
+  height: 80%;
+  margin: 10%;
+}
+
+.timeline-content p {
+  margin: 15px 0 0;
 }

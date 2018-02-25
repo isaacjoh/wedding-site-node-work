@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Hayoung & Isaac's Wedding</title>
 
 	<!-- CSS -->
@@ -24,6 +24,7 @@
 
 <body class="loading">
 	<section class="home-page slide" data-section-name="home">
+		<h1>Hayoung & Isaac's Wedding</h1>
 		<div class="splash-img">
 			<div class="splash-img-tint"></div>
 			<div class="rsvp-btn-container">
@@ -36,8 +37,8 @@
 		</div>
 	</section>
 
-	<section class="wedding-details slide" data-section-name="details">
-		<div class="col-xs-12 col-md-6 wedding-details-info">
+	<section id="wedding-details" class="wedding-details slide" data-section-name="details">
+		<div class="col-xs-12 col-md-6 wedding-details-info wedding-details-info-when">
 			<div class="when-details">
 				<h2>
 					<span>
@@ -70,53 +71,66 @@
 			</div>
 		</div>
 
-		<div class="col-xs-12 col-md-6 wedding-details-info">
+		<div class="col-xs-12 col-md-6 wedding-details-info wedding-details-info-map">
 			<div id="map" class="map"></div>
 
 			<div class="map-btn-container">
-				<a class="map-btn colored-btn" href="javascript:void(0)" target="_blank">
+				<a class="map-btn colored-btn" href="https://www.google.com/maps/place/Seventh%2FPlace/@34.0334334,-118.2342116,17z/data=!3m1!4b1!4m12!1m6!3m5!1s0x80c2c621a0d83247:0xa2a881583f24d647!2sSeventh%2FPlace!8m2!3d34.033429!4d-118.2320229!3m4!1s0x80c2c621a0d83247:0xa2a881583f24d647!8m2!3d34.033429!4d-118.2320229"
+				  target="_blank">
 					<span>MAP</span>
 				</a>
 			</div>
 		</div>
 	</section>
 
-	<section class="wedding-timeline slide" data-section-name="timeline">
+	<section id="wedding-timeline" class="wedding-timeline slide" data-section-name="timeline">
 		<div class="container">
-			<h1 class="project-name">Wedding Day Timeline</h1>
+			<h1 class="section-header">Wedding Day Timeline</h1>
 			<div id="timeline-container">
 				<div class="timeline-item">
 					<div class="timeline-icon">
-						<!-- insert icon here -->
+						<img src="icons/wedding-couple.svg" alt="ceremony-img">
 					</div>
 					<div class="timeline-content">
-						<h2>LOREM IPSUM DOLOR</h2>
+						<h2>Ceremony - 4:30pm</h2>
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, fac.
+							It'll be official!
 						</p>
 					</div>
 				</div>
 
 				<div class="timeline-item">
 					<div class="timeline-icon">
-						<!-- insert icon here -->
+						<img src="icons/taco.svg" alt="taco-img">
 					</div>
 					<div class="timeline-content right">
-						<h2>LOREM IPSUM DOLOR</h2>
+						<h2>Cocktail Hour - 5:15pm</h2>
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo. Maiores magnam modi ab libero praesentium bla.
+							Tacos, boba, drinks, games, you name it.
 						</p>
 					</div>
 				</div>
 
 				<div class="timeline-item">
 					<div class="timeline-icon">
-						<!-- insert icon here -->
+						<img src="icons/reception.svg" alt="reception-img">
 					</div>
 					<div class="timeline-content">
-						<h2>LOREM IPSUM DOLOR</h2>
+						<h2>Reception - 6:30pm</h2>
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo. Maiores magnam modi ab libero praesentium bland.
+							Good food and good company!
+						</p>
+					</div>
+				</div>
+
+				<div class="timeline-item">
+					<div class="timeline-icon">
+						<img src="icons/party.svg" alt="party-img">
+					</div>
+					<div class="timeline-content right">
+						<h2>After Party - 9:00pm</h2>
+						<p>
+							It's party time.
 						</p>
 					</div>
 				</div>
@@ -124,47 +138,88 @@
 		</div>
 	</section>
 
-	<section class="proposal-photos-grid slide" data-section-name="proposal">
-		<div>
-			<main>
-				<div class="content content--center">
-					<div class="grid grid--type-a">
-						<div class="grid__sizer"></div>
-						<div class="grid__item">
-							<a class="grid__link" href="javascript:void(0)">
-								<img class="grid__img" src="images/proposal/1.jpg" alt="Some image" />
-							</a>
-						</div>
-						<div class="grid__item">
-							<a class="grid__link" href="javascript:void(0)">
-								<img class="grid__img" src="images/proposal/2.jpg" alt="Some image" />
-							</a>
-						</div>
-						<div class="grid__item">
-							<a class="grid__link" href="javascript:void(0)">
-								<img class="grid__img" src="images/proposal/3.jpg" alt="Some image" />
-							</a>
-						</div>
-						<div class="grid__item">
-							<a class="grid__link" href="javascript:void(0)">
-								<img class="grid__img" src="images/proposal/4.jpg" alt="Some image" />
-							</a>
-						</div>
+	<section id="proposal-photos-grid" class="proposal-photos-grid slide" data-section-name="proposal">
+		<h1 class="section-header">Proposal Photos</h1>
+		<div class="masonry-container">
+			<div class="content content--center">
+				<div class="grid grid--type-a">
+					<div class="grid__sizer"></div>
+					<div class="grid__item">
+						<a class="grid__link" href="javascript:void(0)">
+							<img class="grid__img" src="images/proposal/1.jpg" alt="Some image" />
+						</a>
+					</div>
+					<div class="grid__item">
+						<a class="grid__link" href="javascript:void(0)">
+							<img class="grid__img" src="images/proposal/2.jpg" alt="Some image" />
+						</a>
+					</div>
+					<div class="grid__item">
+						<a class="grid__link" href="javascript:void(0)">
+							<img class="grid__img" src="images/proposal/3.jpg" alt="Some image" />
+						</a>
+					</div>
+					<div class="grid__item">
+						<a class="grid__link" href="javascript:void(0)">
+							<img class="grid__img" src="images/proposal/4.jpg" alt="Some image" />
+						</a>
+					</div>
+					<div class="grid__item">
+						<a class="grid__link" href="javascript:void(0)">
+							<img class="grid__img" src="images/proposal/5.jpg" alt="Some image" />
+						</a>
+					</div>
+					<div class="grid__item">
+						<a class="grid__link" href="javascript:void(0)">
+							<img class="grid__img" src="images/proposal/6.jpg" alt="Some image" />
+						</a>
+					</div>
+					<div class="grid__item">
+						<a class="grid__link" href="javascript:void(0)">
+							<img class="grid__img" src="images/proposal/7.jpg" alt="Some image" />
+						</a>
+					</div>
+					<div class="grid__item">
+						<a class="grid__link" href="javascript:void(0)">
+							<img class="grid__img" src="images/proposal/8.jpg" alt="Some image" />
+						</a>
+					</div>
+					<div class="grid__item">
+						<a class="grid__link" href="javascript:void(0)">
+							<img class="grid__img" src="images/proposal/9.jpg" alt="Some image" />
+						</a>
+					</div>
+					<div class="grid__item">
+						<a class="grid__link" href="javascript:void(0)">
+							<img class="grid__img" src="images/proposal/10.jpg" alt="Some image" />
+						</a>
+					</div>
+					<div class="grid__item">
+						<a class="grid__link" href="javascript:void(0)">
+							<img class="grid__img" src="images/proposal/11.jpg" alt="Some image" />
+						</a>
+					</div>
+					<div class="grid__item">
+						<a class="grid__link" href="javascript:void(0)">
+							<img class="grid__img" src="images/proposal/12.jpg" alt="Some image" />
+						</a>
 					</div>
 				</div>
-			</main>
+			</div>
 		</div>
 	</section>
 
 	<section class="engagement-photos-grid slide" data-section-name="engagement">
+		<h1 class="section-header">Engagement Photos</h1>
 		<div class="coming-soon">
-			Engagement photos coming soon!
+			Coming soon!
 		</div>
 	</section>
 
 	<section class="wedding-form-page slide" data-section-name="rsvp">
 		<div class="container" id="wedding-form">
 			<div class="wedding-form fs-form-wrap" id="fs-form-wrap">
+				<h1 class="section-header">RSVP</h1>
 				<form id="myform" class="fs-form fs-form-full" autocomplete="off" action="https://docs.google.com/forms/d/e/1FAIpQLSf6ajgQRFnHS5v13ivM1imuGPWUx0PEaM8XoPBJjmbe6ilySg/formResponse">
 					<ol class="fs-fields">
 						<li>
@@ -203,7 +258,7 @@
 						</li>
 						<li>
 							<label class="fs-field-label fs-anim-upper" for="q2">May we have your mailing address?</label>
-							<input class="fs-anim-lower" id="q2" name="entry.1869351217" type="email" required/>
+							<input class="fs-anim-lower" id="q2" name="entry.1869351217" type="email" />
 						</li>
 						<li>
 							<label class="fs-field-label fs-anim-upper" for="q4">Lastly, is there anything you would like us to know? Food allergies, etc.</label>
@@ -211,7 +266,11 @@
 						</li>
 					</ol>
 					<!-- /fs-fields -->
-					<button class="fs-submit" type="submit">Submit</button>
+					<button class="fs-submit colored-btn cool-color-effect" type="submit">
+						<span>
+							Submit
+						</span>
+					</button>
 				</form>
 				<!-- /fs-form -->
 			</div>
@@ -265,7 +324,7 @@
 	<script src="js/imagesloaded.pkgd.min.js"></script>
 	<script src="js/masonry.pkgd.min.js"></script>
 	<script src="js/anime.min.js"></script>
-	<script src="js/scrollify.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
 	<script src="js/grid.js"></script>
 	<script src="js/index.js"></script>
 </body>

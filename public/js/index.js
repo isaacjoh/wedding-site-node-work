@@ -25,8 +25,32 @@ $(document).ready(function() {
 });
 
 window.onload = function() {
-  $(".splash-img").addClass("fadeIn");
-  setTimeout(function() {
-    $(".rsvp-btn").addClass("cool-color-effect");
-  }, 1000);
+  var waypointWeddingDetails = new Waypoint({
+    element: document.getElementById("wedding-details"),
+    handler: function(direction) {
+      $(".map-btn").addClass("cool-color-effect");
+    },
+    offset: 100
+  });
+
+  var isMobile;
+  checkMobile();
+
+  function checkMobile() {
+    if ($(window).width() < 841) {
+      isMobile = true;
+    } else {
+      isMobile = false;
+    }
+
+    if (isMobile) {
+      $(".fs-continue").html("");
+    } else {
+      $(".fs-continue").html("Continue");
+    }
+  }
+
+  $(window).resize(function() {
+    checkMobile();
+  });
 };

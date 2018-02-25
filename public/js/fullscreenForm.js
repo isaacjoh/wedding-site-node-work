@@ -266,8 +266,10 @@
 					self._hideCtrl( self.ctrlContinue );
 					// replace class fs-form-full with fs-form-overview
 					classie.remove( self.formEl, 'fs-form-full' );
+					console.log('last step');
 					classie.add( self.formEl, 'fs-form-overview' );
 					classie.add( self.formEl, 'fs-show' );
+					$(".wedding-form-page").addClass("height-auto");
 					// callback
 					self.options.onReview();
 				}

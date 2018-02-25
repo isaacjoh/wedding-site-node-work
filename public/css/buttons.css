@@ -1,4 +1,4 @@
-a.colored-btn {
+.colored-btn {
   display: block;
   width: 220px;
   height: 70px;
@@ -6,7 +6,7 @@ a.colored-btn {
   transition: all 0.2s ease-in-out;
 }
 
-a.colored-btn.cool-color-effect:after {
+.colored-btn.cool-color-effect:after {
   content: "";
   background: linear-gradient(120deg, #b382b6, #ef8037, #b382b6);
   background-size: 400% 400%;
@@ -15,7 +15,7 @@ a.colored-btn.cool-color-effect:after {
   animation: border 1s forwards ease-in-out reverse;
 }
 
-a.colored-btn > span {
+.colored-btn > span {
   display: block;
   background: linear-gradient(120deg, #b382b6, #ef8037, #b382b6);
   background-size: 400% 400%;
@@ -23,7 +23,7 @@ a.colored-btn > span {
   -webkit-text-fill-color: transparent;
 }
 
-a.colored-btn:hover {
+.colored-btn:hover {
   transform: scale(1.03);
   backface-visibility: hidden;
   -webkit-filter: blur(0);
@@ -31,8 +31,8 @@ a.colored-btn:hover {
 
 /* helpers */
 .absolute-centering,
-a.colored-btn,
-a.colored-btn:after {
+.colored-btn,
+.colored-btn:after {
   position: absolute;
   top: 0;
   left: 0;
@@ -42,9 +42,9 @@ a.colored-btn:after {
 }
 
 .text-formatting,
-a.colored-btn {
+.colored-btn {
   text-transform: uppercase;
-  text-decoration: none;
+  text-decoration: none !important;
   text-align: center;
   letter-spacing: 2px;
   line-height: 70px;

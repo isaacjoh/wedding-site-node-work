@@ -41,7 +41,6 @@
 
   GridLoaderFx.prototype._render = function(effect) {
     grids[0].classList.remove("grid--hidden");
-    console.log("removed");
 
     // Reset styles.
     this._resetStyles();
@@ -165,49 +164,47 @@
     loadingTimeout;
 
   function init() {
-    // Preload images
-    imagesLoaded(body, function() {
-      // Initialize Masonry on each grid.
-      grids.forEach(function(grid) {
-        var m = new Masonry(grid, {
-          itemSelector: ".grid__item",
-          columnWidth: ".grid__sizer",
-          percentPosition: true,
-          transitionDuration: 0
-        });
-        masonry.push(m);
-        // Hide the grid.
-        grid.classList.add("grid--hidden");
-        // Init GridLoaderFx.
-        loaders.push(new GridLoaderFx(grid));
-      });
+    var grid = grids[0];
 
-      // Show current grid.
-      // Remove loading class from body
-      body.classList.remove("loading");
+    var $grid = $(".grid").masonry({
+      itemSelector: ".grid__item",
+      columnWidth: ".grid__sizer",
+      percentPosition: true,
+      transitionDuration: 0
     });
+
+    $grid.imagesLoaded().progress(function() {
+      $grid.masonry("layout");
+    });
+
+    // Init GridLoaderFx.
+    loaders.push(new GridLoaderFx(grid));
+
+    // Remove loading class from body
+    $(body).removeClass("loading");
+
+    setTimeout(function() {
+      $(".splash-img").addClass("fadeIn");
+    }, 1500);
+
+    setTimeout(function() {
+      $(".rsvp-btn").addClass("cool-color-effect");
+    }, 2500);
+
+    console.log("all images loaded");
+    // });
   }
 
   var isImagesLoaded = false;
 
-  $(function() {
-    $.scrollify({
-      section: ".slide",
-      sectionName: "section-name",
-      before: function(index, array) {
-        if (index === 1) {
-          setTimeout(function() {
-            $(".map-btn").addClass("cool-color-effect");
-          }, 750);
-        } else if (index === 3 && !isImagesLoaded) {
-          setTimeout(function() {
-            loaders[0]._render("Hapi");
-            isImagesLoaded = true;
-          }, 500);
-        }
-      },
-      after: function(index, array) {}
-    });
+  var waypointProposal = new Waypoint({
+    element: document.getElementById("wedding-timeline"),
+    handler: function(direction) {
+      if (loaders[0]) {
+        loaders[0]._render("Hapi");
+      }
+    },
+    offset: "bottom-in-view"
   });
 
   init();
