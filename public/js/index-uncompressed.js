@@ -1,5 +1,5 @@
-$(document).ready(function() {
-  $(document).on("click", 'a[href^="#"]', function(e) {
+$(document).ready(function () {
+  $(document).on("click", 'a[href^="#"]', function (e) {
     // target element id
     var id = $(this).attr("href");
 
@@ -19,15 +19,36 @@ $(document).ready(function() {
     $("body, html").animate({ scrollTop: pos });
   });
 
-  $(".submit-btn").on("click", function(e) {
+	$("a.proposal-imgs").fancybox({
+    'hideOnContentClick': true,
+    'transitionIn'	:	'elastic',
+		'transitionOut'	:	'elastic',
+		'speedIn'		:	600, 
+		'speedOut'		:	200, 
+		'overlayShow'	:	false
+  });
+  
+  $(".submit-btn").on("click", function (e) {
     // prevent redirect
   });
 });
 
-window.onload = function() {
+window.onload = function () {
+  console.log('loaded');
+  // Remove loading class from body
+  $("body").removeClass("loading");
+
+  setTimeout(function () {
+    $(".splash-img").addClass("fadeIn");
+  }, 1500);
+
+  setTimeout(function () {
+    $(".rsvp-btn").addClass("cool-color-effect");
+  }, 2500);
+
   var waypointWeddingDetails = new Waypoint({
     element: document.getElementById("wedding-details"),
-    handler: function(direction) {
+    handler: function (direction) {
       $(".map-btn").addClass("cool-color-effect");
     },
     offset: 100
@@ -50,7 +71,7 @@ window.onload = function() {
     }
   }
 
-  $(window).resize(function() {
+  $(window).resize(function () {
     checkMobile();
   });
 };

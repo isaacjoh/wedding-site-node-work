@@ -8,7 +8,7 @@
  * Copyright 2017, Codrops
  * http://www.codrops.com
  */
-(function(window) {
+(function (window) {
   /**
    * GridLoaderFx obj.
    */
@@ -23,11 +23,11 @@
   GridLoaderFx.prototype.effects = {
     Hapi: {
       animeOpts: {
-        duration: function(t, i) {
+        duration: function (t, i) {
           return 600 + i * 75;
         },
         easing: "easeOutExpo",
-        delay: function(t, i) {
+        delay: function (t, i) {
           return i * 50;
         },
         opacity: {
@@ -39,7 +39,7 @@
     }
   };
 
-  GridLoaderFx.prototype._render = function(effect) {
+  GridLoaderFx.prototype._render = function (effect) {
     grids[0].classList.remove("grid--hidden");
 
     // Reset styles.
@@ -50,21 +50,21 @@
       animeOpts = effectSettings.animeOpts;
 
     if (effectSettings.perspective != undefined) {
-      [].slice.call(this.items).forEach(function(item) {
+      [].slice.call(this.items).forEach(function (item) {
         item.parentNode.style.WebkitPerspective = item.parentNode.style.perspective =
           effectSettings.perspective + "px";
       });
     }
 
     if (effectSettings.origin != undefined) {
-      [].slice.call(this.items).forEach(function(item) {
+      [].slice.call(this.items).forEach(function (item) {
         item.style.WebkitTransformOrigin = item.style.transformOrigin =
           effectSettings.origin;
       });
     }
 
     if (effectSettings.lineDrawing != undefined) {
-      [].slice.call(this.items).forEach(function(item) {
+      [].slice.call(this.items).forEach(function (item) {
         // Create SVG.
         var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg"),
           path = document.createElementNS("http://www.w3.org/2000/svg", "path"),
@@ -93,7 +93,7 @@
     }
 
     if (effectSettings.revealer != undefined) {
-      [].slice.call(this.items).forEach(function(item) {
+      [].slice.call(this.items).forEach(function (item) {
         var revealer = document.createElement("div");
         revealer.className = "grid__reveal";
         if (effectSettings.revealerOrigin != undefined) {
@@ -107,7 +107,7 @@
 
       var animeRevealerOpts = effectSettings.animeRevealerOpts;
       animeRevealerOpts.targets = this.el.querySelectorAll(".grid__reveal");
-      animeRevealerOpts.begin = function(obj) {
+      animeRevealerOpts.begin = function (obj) {
         for (var i = 0, len = obj.animatables.length; i < len; ++i) {
           obj.animatables[i].target.style.opacity = 1;
         }
@@ -117,23 +117,23 @@
     }
 
     if (effectSettings.itemOverflowHidden) {
-      [].slice.call(this.items).forEach(function(item) {
+      [].slice.call(this.items).forEach(function (item) {
         item.parentNode.style.overflow = "hidden";
       });
     }
 
     animeOpts.targets =
       effectSettings.sortTargetsFn &&
-      typeof effectSettings.sortTargetsFn === "function"
+        typeof effectSettings.sortTargetsFn === "function"
         ? [].slice.call(this.items).sort(effectSettings.sortTargetsFn)
         : this.items;
     anime.remove(animeOpts.targets);
     anime(animeOpts);
   };
 
-  GridLoaderFx.prototype._resetStyles = function() {
+  GridLoaderFx.prototype._resetStyles = function () {
     this.el.style.WebkitPerspective = this.el.style.perspective = "none";
-    [].slice.call(this.items).forEach(function(item) {
+    [].slice.call(this.items).forEach(function (item) {
       var gItem = item.parentNode;
       item.style.opacity = 0;
       item.style.WebkitTransformOrigin = item.style.transformOrigin = "50% 50%";
@@ -166,30 +166,38 @@
   function init() {
     var grid = grids[0];
 
-    var $grid = $(".grid").masonry({
-      itemSelector: ".grid__item",
-      columnWidth: ".grid__sizer",
-      percentPosition: true,
-      transitionDuration: 0
+    // var $grid = $(".grid").masonry({
+    //   itemSelector: ".grid__item",
+    //   columnWidth: ".grid__sizer",
+    //   percentPosition: true,
+    //   transitionDuration: 0
+    // });
+
+    // $grid.imagesLoaded().progress(function () {
+    //   $grid.masonry("layout");
+    // });
+
+    $("img.lazyload").lazyload();
+
+    $("img.lazyload").on("load", function () {
+      masonry_update();
     });
 
-    $grid.imagesLoaded().progress(function() {
-      $grid.masonry("layout");
-    });
+    function masonry_update() {
+      var $grid = $('#grid');
+      $grid.imagesLoaded(function () {
+        $grid.masonry({
+          itemSelector: ".grid__item",
+          columnWidth: ".grid__sizer",
+          percentPosition: true,
+          transitionDuration: 0,
+          // isFitWidth: true
+        });
+      });
+    }
 
     // Init GridLoaderFx.
     loaders.push(new GridLoaderFx(grid));
-
-    // Remove loading class from body
-    $(body).removeClass("loading");
-
-    setTimeout(function() {
-      $(".splash-img").addClass("fadeIn");
-    }, 1500);
-
-    setTimeout(function() {
-      $(".rsvp-btn").addClass("cool-color-effect");
-    }, 2500);
     // });
   }
 
@@ -197,7 +205,7 @@
 
   var waypointProposal = new Waypoint({
     element: document.getElementById("wedding-timeline"),
-    handler: function(direction) {
+    handler: function (direction) {
       if (loaders[0]) {
         loaders[0]._render("Hapi");
       }
