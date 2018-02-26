@@ -43,26 +43,3 @@ $(document).ready(function () {
     $(".rsvp-btn").addClass("cool-color-effect");
   }, 2500);
 });
-
-window.onload = function () {
-  var isMobile;
-  checkMobile();
-
-  function checkMobile() {
-    if ($(window).width() < 841) {
-      isMobile = true;
-    } else {
-      isMobile = false;
-    }
-
-    if (isMobile) {
-      $(".fs-continue").html("");
-    } else {
-      $(".fs-continue").html("Continue");
-    }
-  }
-
-  $(window).resize(function () {
-    checkMobile();
-  });
-};
