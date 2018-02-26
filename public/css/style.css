@@ -137,13 +137,19 @@ a:focus {
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background-image: url("../images/splash-img.jpg");
+  background-image: url("../images/splash-img-mobile.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   position: relative;
   z-index: 1;
   text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .splash-img {
+    background-image: url("../images/splash-img.jpg");
+  }
 }
 
 .fadeIn {
