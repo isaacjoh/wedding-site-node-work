@@ -146,12 +146,6 @@ a:focus {
   text-align: center;
 }
 
-@media screen and (min-width: 768px) {
-  .splash-img {
-    background-image: url("../images/splash-img.jpg");
-  }
-}
-
 .fadeIn {
   animation: fadeInFromNone 2.5s ease-out;
   animation-fill-mode: forwards;
