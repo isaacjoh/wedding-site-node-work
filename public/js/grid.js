@@ -166,37 +166,37 @@
   function init() {
     var grid = grids[0];
 
-    // var $grid = $(".grid").masonry({
-    //   itemSelector: ".grid__item",
-    //   columnWidth: ".grid__sizer",
-    //   percentPosition: true,
-    //   transitionDuration: 0
-    // });
-
-    // $grid.imagesLoaded().progress(function () {
-    //   $grid.masonry("layout");
-    // });
-
-    $("img.lazyload").lazyload({
-      skip_invisible: false
+    var $grid = $(".grid").masonry({
+      itemSelector: ".grid__item",
+      columnWidth: ".grid__sizer",
+      percentPosition: true,
+      transitionDuration: 0
     });
 
-    $("img.lazyload").on("load", function () {
-      masonry_update();
+    $grid.imagesLoaded().progress(function () {
+      $grid.masonry("layout");
     });
 
-    function masonry_update() {
-      var $grid = $('#grid');
-      $grid.imagesLoaded(function () {
-        $grid.masonry({
-          itemSelector: ".grid__item",
-          columnWidth: ".grid__sizer",
-          percentPosition: true,
-          transitionDuration: 0,
-          // isFitWidth: true
-        });
-      });
-    }
+    // $("img.lazyload").lazyload({
+    //   skip_invisible: false
+    // });
+
+    // $("img.lazyload").on("load", function () {
+    //   masonry_update();
+    // });
+
+    // function masonry_update() {
+    //   var $grid = $('#grid');
+    //   $grid.imagesLoaded(function () {
+    //     $grid.masonry({
+    //       itemSelector: ".grid__item",
+    //       columnWidth: ".grid__sizer",
+    //       percentPosition: true,
+    //       transitionDuration: 0,
+    //       // isFitWidth: true
+    //     });
+    //   });
+    // }
 
     $(window).resize();
     

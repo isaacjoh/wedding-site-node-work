@@ -19,21 +19,19 @@ $(document).ready(function () {
     $("body, html").animate({ scrollTop: pos });
   });
 
-	$("a.proposal-imgs").fancybox({
+  $("a.proposal-imgs").fancybox({
     'hideOnContentClick': true,
-    'transitionIn'	:	'elastic',
-		'transitionOut'	:	'elastic',
-		'speedIn'		:	600, 
-		'speedOut'		:	200, 
-		'overlayShow'	:	false
+    'transitionIn': 'elastic',
+    'transitionOut': 'elastic',
+    'speedIn': 600,
+    'speedOut': 200,
+    'overlayShow': false
   });
 
   $(".submit-btn").on("click", function (e) {
     // prevent redirect
   });
-});
 
-window.onload = function () {
   // Remove loading class from body
   $("body").removeClass("loading");
 
@@ -44,7 +42,9 @@ window.onload = function () {
   setTimeout(function () {
     $(".rsvp-btn").addClass("cool-color-effect");
   }, 2500);
-  
+});
+
+window.onload = function () {
   var isMobile;
   checkMobile();
 
