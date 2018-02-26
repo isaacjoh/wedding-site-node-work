@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $(document).on("click", 'a[href^="#"]', function (e) {
+  $(document).on("click", "a[href^='#']", function (e) {
     // target element id
     var id = $(this).attr("href");
 
@@ -20,12 +20,12 @@ $(document).ready(function () {
   });
 
   $("a.proposal-imgs").fancybox({
-    'hideOnContentClick': true,
-    'transitionIn': 'elastic',
-    'transitionOut': 'elastic',
-    'speedIn': 600,
-    'speedOut': 200,
-    'overlayShow': false
+    "hideOnContentClick": true,
+    "transitionIn": "elastic",
+    "transitionOut": "elastic",
+    "speedIn": 600,
+    "speedOut": 200,
+    "overlayShow": false
   });
 
   $(".submit-btn").on("click", function (e) {
@@ -42,4 +42,10 @@ $(document).ready(function () {
   setTimeout(function () {
     $(".rsvp-btn").addClass("cool-color-effect");
   }, 2500);
+
+  $(".fs-continue").on("click", function () {
+    $("html, body").animate({
+      scrollTop: $(document).height() - $(window).height()
+    });
+  });
 });
