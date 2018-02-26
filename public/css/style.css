@@ -429,10 +429,11 @@ Large devices (large desktops, 1200px and up) */
 @media screen and (max-width: 486px) {
   .login-page h1 {
     width: 80%;
+    font-size: 2.5em;
   }
 
   .login-page input {
-    width: 100px;
+    width: 300px;
   }
 }
 
