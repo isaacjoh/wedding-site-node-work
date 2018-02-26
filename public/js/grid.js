@@ -164,18 +164,18 @@
     loadingTimeout;
 
   function init() {
-    var grid = grids[0];
+    // var grid = grids[0];
 
-    var $grid = $(".grid").masonry({
-      itemSelector: ".grid__item",
-      columnWidth: ".grid__sizer",
-      percentPosition: true,
-      transitionDuration: 0
-    });
+    // var $grid = $(".grid").masonry({
+    //   itemSelector: ".grid__item",
+    //   columnWidth: ".grid__sizer",
+    //   percentPosition: true,
+    //   transitionDuration: 0
+    // });
 
-    $grid.imagesLoaded().progress(function () {
-      $grid.masonry("layout");
-    });
+    // $grid.imagesLoaded().progress(function () {
+    //   $grid.masonry("layout");
+    // });
 
     // $("img.lazyload").lazyload({
     //   skip_invisible: false
@@ -198,10 +198,10 @@
     //   });
     // }
 
-    $(window).resize();
+    // $(window).resize();
     
     // Init GridLoaderFx.
-    loaders.push(new GridLoaderFx(grid));
+    // loaders.push(new GridLoaderFx(grid));
     // });
   }
 
