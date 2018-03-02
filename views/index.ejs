@@ -230,12 +230,12 @@
 								</div>
 							</div>
 						</li>
-						<li data-input-trigger>
+						<li class="conditional-going" data-input-trigger>
 							<div name="entry.66188498">
 								<label class="fs-field-label fs-anim-upper" for="q3">If you are married, will your spouse be attending as well?</label>
 								<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
 									<span>
-										<input id="q5b" type="radio" name="entry.66188498" value="Yes" required />
+										<input id="q5b" type="radio" name="entry.66188498" value="Yes" />
 										<label for="q5b" class="radio-yes">Yes!</label>
 									</span>
 									<span>
@@ -245,12 +245,12 @@
 								</div>
 							</div>
 						</li>
-						<li>
+						<li class="conditional-going">
 							<label class="fs-field-label fs-anim-upper" for="q2">May we have your mailing address?</label>
 							<input class="fs-anim-lower" id="q2" name="entry.1869351217" type="email" />
 						</li>
 						<li>
-							<label class="fs-field-label fs-anim-upper" for="q4">Lastly, is there anything you would like us to know? Food allergies, etc.</label>
+							<label class="fs-field-label fs-anim-upper" for="q4">Is there anything you would like us to know? Food allergies, etc.</label>
 							<input class="fs-anim-lower" id="q4" name="entry.1907914133" type="text" />
 						</li>
 					</ol>
@@ -267,6 +267,7 @@
 		</div>
 	</section>
 
+	<script src="js/jquery.min.js"></script>
 	<script>
 		function initMap() {
 			var seventh_place = {
@@ -307,7 +308,6 @@
 			});
 		})();
 	</script>
-	<script src="js/jquery.min.js"></script>
 	<script src="js/fancybox.js"></script>
 	<script src="js/imagesloaded.pkgd.min.js"></script>
 	<script src="js/masonry.pkgd.min.js"></script>

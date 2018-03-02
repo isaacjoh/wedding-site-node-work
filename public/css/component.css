@@ -258,16 +258,13 @@ button.fs-continue,
 .fs-form-overview .fs-fields input {
   border-bottom-color: transparent;
   color: rgba(0, 0, 0, 0.5);
+  font-size: 1.2em;
 }
 
 .fs-fields [required] {
   background-position: top right;
   background-size: 18px;
   background-repeat: no-repeat;
-}
-
-.fs-form-overview .fs-fields input {
-  font-size: 1.2em;
 }
 
 .fs-fields .fs-radio-custom input[type="radio"] {
