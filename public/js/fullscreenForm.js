@@ -16,13 +16,13 @@
 		animEndEventNames = { 'WebkitAnimation': 'webkitAnimationEnd', 'OAnimation': 'oAnimationEnd', 'msAnimation': 'MSAnimationEnd', 'animation': 'animationend' },
 		// animation end event name
 		animEndEventName = animEndEventNames[Modernizr.prefixed('animation')];
-		
+
 	$("#q3b").on("click", function (e) {
 		$(".conditional-going").removeClass("hide");
 	});
 
 	$("#q3c").on("click", function (e) {
-		c$(".conditional-going").addClass("hide");
+		$(".conditional-going").addClass("hide");
 	});
 
 	/**
