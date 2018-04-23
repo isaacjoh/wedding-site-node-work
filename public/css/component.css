@@ -275,6 +275,14 @@ button.fs-continue,
   font-size: 1.2em;
 }
 
+.fs-form-overview .fs-fields textarea{
+  border-bottom-color: transparent;
+  color: rgba(0,0,0,.5);
+  background: #ffffff;
+  width: 100%; 
+  font-size: 1.2em
+}
+
 .fs-fields [required] {
   background-position: top right;
   background-size: 18px;
@@ -314,7 +322,7 @@ button.fs-continue,
 
 .fs-fields>li .fs-radio-custom span label {
   color: black;
-  font-size: 1.2em;
+  font-size: 1em;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
@@ -397,8 +405,7 @@ button.fs-continue,
 }
 
 .fs-form-overview .fs-fields textarea {
-  height: 100px;
-  color: rgba(0, 0, 0, 0.5);
+  height: 110px;
 }
 
 .fs-fields textarea:focus {
@@ -411,7 +418,7 @@ button.fs-continue,
 }
 
 .fs-form-overview .fs-fields textarea:focus {
-  background: black;
+  background: white;
 }
 
 .fs-form div.cs-select.cs-skin-boxes {
@@ -695,6 +702,7 @@ button.fs-submit span {
 
 .fs-form-overview .fs-submit,
 .no-js .fs-form .fs-submit {
+  margin-top: 50px !important;
   float: none !important;
   margin: 0 auto;
   position: relative;
@@ -707,11 +715,6 @@ button.fs-continue {
   bottom: 0;
   margin: 0 40px 85px 0;
   font-size: 1.25em;
-}
-
-button.fs-continue:hover {
-  background: #232529;
-  color: #fff;
 }
 
 .fs-continue::after {
@@ -935,7 +938,7 @@ input[type="text"]::-ms-clear {
     left: 0;
     width: 100%;
     height: 100%;
-    content: "\27A1";
+    content: url(../icons/arrow-right.svg);
     text-align: center;
     font-size: 1em;
     line-height: 50px;
@@ -961,5 +964,21 @@ input[type="text"]::-ms-clear {
 @media screen and (max-width: 840px) {
   button.fs-continue {
     bottom: 60px;
+    color: transparent;
+    background-image: url(../icons/arrow-right.svg);
+    background-size: 55%;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  button.fs-continue:hover {
+    color: transparent;
+  }
+}
+
+@media screen and (min-width: 841px) {
+  button.fs-continue:hover {
+    background: #232529;
+    color: #fff;
   }
 }

@@ -1,16 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Rambla');
-
 *,
 *:after,
 *:before {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 .clearfix:before,
 .clearfix:after {
   content: "";
   display: table;
 }
+
 .clearfix:after {
   clear: both;
 }
@@ -137,7 +138,7 @@ a:focus {
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background-image: url("../images/splash-img-mobile.jpg");
+  background-image: url("../images/splash-img-mobile2.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -155,7 +156,6 @@ a:focus {
   0% {
     opacity: 0;
   }
-
   100% {
     opacity: 1;
   }
@@ -234,7 +234,7 @@ a:focus {
 .login-page-img {
   width: 100vw;
   height: 100vh;
-  background-image: url("../images/login-page-img.jpg");
+  background-image: url("../images/login-page-img-mobile.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -248,6 +248,8 @@ a:focus {
 
 .login-page {
   color: #fce8ec;
+  position: relative;
+  height: 100%
 }
 
 .login-page h1 {
@@ -351,7 +353,7 @@ a:focus {
   position: fixed;
   top: 20px;
   right: 20px;
-  z-index: 2;
+  z-index: 10000;
   color: #000;
 }
 
@@ -384,31 +386,25 @@ Large devices (large desktops, 1200px and up) */
   .slide {
     height: auto;
   }
-
   .wedding-form-page {
     height: 100%;
   }
-
   .home-page h1 {
     left: 0;
     top: 34%;
   }
-
   .wedding-details {
     display: flex;
     flex-direction: column;
   }
-
   .wedding-details .wedding-details-info-when {
     height: 40%;
     padding: 80px 0 60px;
   }
-
   .wedding-details .wedding-details-info-map {
     height: 60%;
     padding-bottom: 100px;
   }
-
   .coming-soon {
     width: 65%;
   }
@@ -421,34 +417,27 @@ Large devices (large desktops, 1200px and up) */
     width: 50%;
     font-size: 2.8em;
   }
-
   .wedding-details .wedding-details-info-when {
     height: 40%;
     padding: 50px 0;
   }
-
   .wedding-form-page {
     height: 100%;
   }
-
   .fs-form-overview .fs-fields input {
     font-size: 20px;
   }
-
   .login-page h1 {
     font-size: 36px;
   }
-
   .countdown-container {
     width: 150px;
     height: 150px;
     font-size: 24px;
   }
-
   .countdown-container:first-child {
     margin-right: 20px;
   }
-
   .splash-img {
     background-position: 42% 50%;
   }
@@ -459,9 +448,17 @@ Large devices (large desktops, 1200px and up) */
     width: 80%;
     font-size: 2.5em;
   }
-
   .login-page input {
     width: 150px;
+    font-size: 48px;
+  }
+  .countdown-container {
+    width: 120px;
+    height: 120px;
+    font-size: 20px;
+  }
+  .countdown-outer-container {
+    margin-bottom: 30px;
   }
 }
 
