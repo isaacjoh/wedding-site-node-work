@@ -11,12 +11,24 @@
 	<!-- load bootstrap and our own personal stylesheet -->
 	<link href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/superhero/bootstrap.min.css" rel="stylesheet">
 	<link rel="shortcut icon" type="image/x-icon" href="icons/favicon.ico">
-	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" tyoe="text/css" href="css/fancybox.css">
+	<link rel="stylesheet" tyoe="text/css" href="css/cs-select.css">
+	<link rel="stylesheet" tyoe="text/css" href="css/cs-skin-boxes.css">
+	<link rel="stylesheet" type="text/css" href="css/grid.css">
+	<link rel="stylesheet" type="text/css" href="css/buttons.css">
+	<link rel="stylesheet" type="text/css" href="css/component.css">
+	<link rel="stylesheet" type="text/css" href="css/timeline.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="js/modernizr.custom.js"></script>
 </head>
 
 <body class="loading">
+	<div class="languages">
+		<span class="language korean">한국어</span>
+		<span class="language english">ENGLISH</span>
+	</div>
+
 	<section class="home-page slide" data-section-name="home">
 		<h1>Hayoung & Isaac's Wedding</h1>
 		<div class="splash-img">
@@ -212,45 +224,79 @@
 				<form id="myform" class="fs-form fs-form-full" autocomplete="off" action="https://docs.google.com/forms/d/e/1FAIpQLSf6ajgQRFnHS5v13ivM1imuGPWUx0PEaM8XoPBJjmbe6ilySg/formResponse">
 					<ol class="fs-fields">
 						<li>
-							<label class="fs-field-label fs-anim-upper" for="q1">First and last name please!</label>
+							<div class="labels-container">
+								<label class="fs-field-label fs-anim-upper english-text" for="q1">First and last name please!</label>
+								<label class="fs-field-label fs-anim-upper korean-text hide-me" for="q1">이름을 적어주세요.</label>
+							</div>
 							<input class="fs-anim-lower" id="q1" name="entry.2119593387" type="text" required/>
 						</li>
 						<li data-input-trigger>
 							<div name="entry.1705276704">
-								<label class="fs-field-label fs-anim-upper" for="q3">Will you be attending our wedding?</label>
+								<div class="labels-container">
+									<label class="fs-field-label fs-anim-upper english-text" for="q3">Will you be attending our wedding?</label>
+									<label class="fs-field-label fs-anim-upper korean-text hide-me" for="q3">우리 결혼식에 참석 하시겠습니까?</label>
+								</div>
 								<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
 									<span>
 										<input id="q3b" type="radio" name="entry.1705276704" value="Yes, I'll be there to celebrate with y'all!" required />
-										<label for="q3b" class="radio-yes">Yes! I will be there to celebrate with y'all!</label>
+										<div class="labels-container">
+											<label for="q3b" class="radio-yes english-text">Yes! I will be there to celebrate with y'all!</label>
+											<label for="q3b" class="radio-yes korean-text hide-me">네!</label>
+										</div>
 									</span>
 									<span>
 										<input id="q3c" type="radio" name="entry.1705276704" value="No, unfortunately I cannot." />
-										<label for="q3c" class="radio-no">No, unfortunately I cannot.</label>
+										<div class="labels-container">
+											<label for="q3c" class="radio-no english-text">No, unfortunately I cannot.</label>
+											<label for="q3c" class="radio-no korean-text hide-me">아니요!</label>
+										</div>
 									</span>
 								</div>
 							</div>
 						</li>
 						<li class="conditional-going" data-input-trigger>
 							<div name="entry.66188498">
-								<label class="fs-field-label fs-anim-upper" for="q3">If you are married, will your spouse be attending as well?</label>
+								<div class="labels-container">
+									<label class="fs-field-label fs-anim-upper english-text" for="q5">If you are married, will your spouse be attending as well?</label>
+									<label class="fs-field-label fs-anim-upper korean-text hide-me" for="q5">당신이 결혼했다면 배우자도 참석할 것입니까?</label>
+								</div>
 								<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
 									<span>
 										<input id="q5b" type="radio" name="entry.66188498" value="Yes" />
-										<label for="q5b" class="radio-yes">Yes!</label>
+										<div class="labels-container">
+											<label for="q5b" class="radio-yes english-text">Yes!</label>
+											<label for="q5b" class="radio-yes korean-text hide-me">네!</label>
+										</div>
 									</span>
 									<span>
 										<input id="q5c" type="radio" name="entry.66188498" value="No" />
-										<label for="q5c" class="radio-no">No!</label>
+										<div class="labels-container">
+											<label for="q5c" class="radio-no english-text">No!</label>
+											<label for="q5c" class="radio-no korean-text hide-me">아니요!</label>
+										</div>
 									</span>
 								</div>
 							</div>
 						</li>
+						<li class="conditional-going spouse-going" data-input-trigger>
+							<div class="labels-container">
+								<label class="fs-field-label fs-anim-upper english-text" for="q6">What is your spouse's name?</label>
+								<label class="fs-field-label fs-anim-upper korean-text hide-me" for="q6">배우자의 이름은 무엇입니까?</label>
+							</div>
+							<input class="fs-anim-lower" id="q6" name="entry.929739356" type="text" />
+						</li>
 						<li class="conditional-going">
-							<label class="fs-field-label fs-anim-upper" for="q2">May we have your mailing address?</label>
+							<div class="labels-container">
+								<label class="fs-field-label fs-anim-upper english-text" for="q2">May we have your mailing address?</label>
+								<label class="fs-field-label fs-anim-upper korean-text hide-me" for="q2">우편 주소를 알려 주실 수 있습니까?</label>
+							</div>
 							<textarea class="fs-anim-lower" id="q2" name="entry.1869351217" type="email"></textarea>
 						</li>
 						<li>
-							<label class="fs-field-label fs-anim-upper" for="q4">Is there anything you would like us to know? Food allergies, etc.</label>
+							<div class="labels-container">
+								<label class="fs-field-label fs-anim-upper english-text" for="q4">Is there anything you would like us to know? Food allergies, etc.</label>
+								<label class="fs-field-label fs-anim-upper korean-text hide-me" for="q4">우리가 알고 싶어하는 것이 있습니까? 음식 알레르기 등.</label>
+							</div>
 							<textarea class="fs-anim-lower" id="q4" name="entry.1907914133" type="text"></textarea>
 						</li>
 					</ol>

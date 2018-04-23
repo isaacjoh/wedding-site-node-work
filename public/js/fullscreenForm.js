@@ -25,6 +25,14 @@
 		$(".conditional-going").addClass("hide");
 	});
 
+	$("#q5b").on("click", function (e) {
+		$(".spouse-going").removeClass("hide");
+	});
+
+	$("#q5c").on("click", function (e) {
+		$(".spouse-going").addClass("hide");
+	});
+
 	/**
 	 * extend obj function
 	 */
@@ -254,14 +262,16 @@
 		classie.remove(currentFld, 'fs-current');
 		classie.add(currentFld, 'fs-hide');
 
-		if (!this.isLastStep) {
-			// update nav
-			this._updateNav();
+		if (!this.isLastStep) {			
+			if (!this.formEl[3].checked && this.current === 3) {
+				var nextField = this.fields[this.current + 1];
+				this.current = this.current + 1;
+				this._updateNav(this.current);
+			} else {
+				var nextField = this.fields[this.current];
+				this._updateNav();
+			}
 
-			// change the current field number/status
-			this._updateFieldNumber();
-
-			var nextField = this.fields[this.current];
 			classie.add(nextField, 'fs-current');
 			classie.add(nextField, 'fs-show');
 		}
@@ -333,28 +343,6 @@
 	}
 
 	/**
-	 * updateFieldNumber function
-	 * changes the current field number
-	 */
-	FForm.prototype._updateFieldNumber = function () {
-		if (this.options.ctrlNavPosition) {
-			// first, create next field number placeholder
-			this.ctrlFldStatusNew = document.createElement('span');
-			this.ctrlFldStatusNew.className = 'fs-number-new';
-			this.ctrlFldStatusNew.innerHTML = Number(this.current + 1);
-
-			// insert it in the DOM
-			this.ctrlFldStatus.appendChild(this.ctrlFldStatusNew);
-
-			// add class "fs-show-next" or "fs-show-prev" depending on the navigation direction
-			var self = this;
-			setTimeout(function () {
-				classie.add(self.ctrlFldStatus, self.navdir === 'next' ? 'fs-show-next' : 'fs-show-prev');
-			}, 25);
-		}
-	}
-
-	/**
 	 * progress function
 	 * updates the progress bar by setting its width
 	 */
@@ -368,11 +356,11 @@
 	 * updateNav function
 	 * updates the navigation dots
 	 */
-	FForm.prototype._updateNav = function () {
+	FForm.prototype._updateNav = function (skip) {
 		if (this.options.ctrlNavDots) {
 			classie.remove(this.ctrlNav.querySelector('button.fs-dot-current'), 'fs-dot-current');
-			classie.add(this.ctrlNavDots[this.current], 'fs-dot-current');
-			this.ctrlNavDots[this.current].disabled = false;
+			classie.add(this.ctrlNavDots[skip || this.current], 'fs-dot-current');
+			this.ctrlNavDots[skip || this.current].disabled = false;
 		}
 	}
 

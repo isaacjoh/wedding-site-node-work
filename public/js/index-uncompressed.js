@@ -16,7 +16,9 @@ $(document).ready(function () {
     var pos = $id.offset().top;
 
     // animated top scrolling
-    $("body, html").animate({ scrollTop: pos });
+    $("body, html").animate({
+      scrollTop: pos
+    });
   });
 
   $("a.proposal-imgs").fancybox({
@@ -47,5 +49,15 @@ $(document).ready(function () {
     $("html, body").animate({
       scrollTop: $(document).height() - $(window).height()
     });
+  });
+
+  $(".korean").click(function () {
+    $(".korean-text").removeClass("hide-me");
+    $(".english-text").addClass("hide-me");
+  });
+
+  $(".english").click(function () {
+    $(".english-text").removeClass("hide-me");
+    $(".korean-text").addClass("hide-me");
   });
 });

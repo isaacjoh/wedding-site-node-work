@@ -1,4 +1,5 @@
 /* Main form wrapper */
+
 .fs-form-wrap {
   position: relative;
   width: 100%;
@@ -11,6 +12,7 @@
 }
 
 /* Title */
+
 .fs-title {
   position: absolute;
   top: 0;
@@ -25,6 +27,7 @@
 }
 
 /* Form */
+
 .fs-form {
   position: relative;
   text-align: left;
@@ -36,6 +39,7 @@
 }
 
 /* Views (fullscreen and overview)*/
+
 @media screen and (max-width: 991px) {
   .fs-form-full {
     top: 32%;
@@ -83,6 +87,7 @@
 }
 
 /* Switch view animation (we hide the current view, switch the view class and show it again) */
+
 .fs-form.fs-show {
   -webkit-animation: animFadeIn 0.5s;
   animation: animFadeIn 0.5s;
@@ -121,10 +126,13 @@
   from {
     top: 100px;
   }
-} /* we need to use top here because otherwise all our fixed elements will become absolute */
+}
+
+/* we need to use top here because otherwise all our fixed elements will become absolute */
 
 /* Visibility control of elements */
-.fs-form-full .fs-fields > li,
+
+.fs-form-full .fs-fields>li,
 .fs-nav-dots,
 .fs-progress,
 .fs-numbers,
@@ -134,7 +142,7 @@ button.fs-continue,
   visibility: hidden;
 }
 
-.no-js .fs-form-full .fs-fields > li {
+.no-js .fs-form-full .fs-fields>li {
   visibility: visible;
 }
 
@@ -143,6 +151,7 @@ button.fs-continue,
 }
 
 /* Some general styles */
+
 .fs-form-wrap button {
   border: none;
   background: none;
@@ -159,11 +168,13 @@ button.fs-continue,
 }
 
 /* Hide the submit button */
+
 .fs-form .fs-submit {
   display: none;
 }
 
 /* Fields */
+
 .fs-fields {
   position: relative;
   margin: 0 auto;
@@ -172,7 +183,7 @@ button.fs-continue,
   list-style: none;
 }
 
-.fs-fields > li {
+.fs-fields>li {
   position: relative;
   z-index: 1;
   margin: 0;
@@ -180,28 +191,29 @@ button.fs-continue,
   border: none;
 }
 
-.fs-fields > li:hover {
+.fs-fields>li:hover {
   z-index: 999;
 }
 
-.js .fs-form-full .fs-fields > li {
+.js .fs-form-full .fs-fields>li {
   position: absolute;
   width: 100%;
 }
 
-.fs-form-overview .fs-fields > li,
-.no-js .fs-form .fs-fields > li {
+.fs-form-overview .fs-fields>li,
+.no-js .fs-form .fs-fields>li {
   margin: 1em 0 2em;
   padding: 0 0 2em 0;
   border-bottom: 2px solid rgba(0, 0, 0, 0.1);
 }
 
 /* Labels & info */
-.fs-fields > li label {
+
+.fs-fields>li label {
   position: relative;
 }
 
-.fs-fields > li label.fs-field-label {
+.fs-fields>li label.fs-field-label {
   font-size: 1em;
   display: inline-block;
   padding: 0 5px 1em 0;
@@ -211,13 +223,13 @@ button.fs-continue,
 }
 
 @media screen and (max-width: 767px) {
-  .fs-fields > li label.fs-field-label {
+  .fs-fields>li label.fs-field-label {
     font-size: 24px;
   }
 }
 
-.fs-form-full .fs-fields > li label:hover ~ .fs-info,
-.fs-form-full .fs-fields > li .fs-info:hover {
+.fs-form-full .fs-fields>li label:hover~.fs-info,
+.fs-form-full .fs-fields>li .fs-info:hover {
   opacity: 1;
   -webkit-transform: translateY(0);
   transform: translateY(0);
@@ -225,6 +237,7 @@ button.fs-continue,
 }
 
 /* Inputs */
+
 .fs-fields input {
   display: block;
   margin: 0;
@@ -252,7 +265,8 @@ button.fs-continue,
 }
 
 .fs-fields input:invalid {
-  box-shadow: none; /* removes red shadow in FF*/
+  box-shadow: none;
+  /* removes red shadow in FF*/
 }
 
 .fs-form-overview .fs-fields input {
@@ -278,7 +292,7 @@ button.fs-continue,
   cursor: pointer;
 }
 
-.fs-fields > li .fs-radio-custom span {
+.fs-fields>li .fs-radio-custom span {
   float: left;
   position: relative;
   margin-right: 15%;
@@ -292,28 +306,28 @@ button.fs-continue,
 }
 
 @media screen and (max-width: 767px) {
-  .fs-fields > li .fs-radio-custom span {
+  .fs-fields>li .fs-radio-custom span {
     margin-right: 0;
     width: 50%;
   }
 }
 
-.fs-fields > li .fs-radio-custom span label {
+.fs-fields>li .fs-radio-custom span label {
   color: black;
   font-size: 1.2em;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
 
-.fs-form-overview .fs-fields > li .fs-radio-custom span {
+.fs-form-overview .fs-fields>li .fs-radio-custom span {
   max-width: 140px;
 }
 
-.fs-form-overview .fs-fields > li .fs-radio-custom span {
+.fs-form-overview .fs-fields>li .fs-radio-custom span {
   font-size: 75%;
 }
 
-.fs-fields > li .fs-radio-custom label {
+.fs-fields>li .fs-radio-custom label {
   display: block;
   padding-top: 100%;
   width: 100%;
@@ -351,27 +365,22 @@ button.fs-continue,
   opacity: 0.2;
 }
 
-.fs-form-overview .fs-fields > li .fs-radio-custom span label {
+.fs-form-overview .fs-fields>li .fs-radio-custom span label {
   opacity: 0.2;
 }
 
 .fs-fields .fs-radio-custom label:hover::after,
-.fs-fields input[type="radio"]:focus + label::after,
-.fs-fields input[type="radio"]:checked + label::after,
+.fs-fields input[type="radio"]:focus+.labels-container label::after,
+.fs-fields input[type="radio"]:checked+.labels-container label::after,
 .fs-fields .fs-radio-custom label:hover {
   opacity: 1 !important;
 }
 
-.fs-fields .fs-radio-custom input[type="radio"]:checked + label {
-  color: white;
+.fs-fields .fs-radio-custom input[type="radio"]:checked+.labels-container label {
   opacity: 1;
 }
 
-.fs-form-overview
-  .fs-fields
-  .fs-radio-custom
-  input[type="radio"]:checked
-  + label {
+.fs-form-overview .fs-fields .fs-radio-custom input[type="radio"]:checked+.labels-container label {
   color: rgba(0, 0, 0, 0.8);
 }
 
@@ -409,14 +418,14 @@ button.fs-continue,
   display: block;
 }
 
-.fs-form-overview .cs-skin-boxes > span {
+.fs-form-overview .cs-skin-boxes>span {
   border-radius: 5px;
   width: 90px;
   height: 70px;
   font-size: 0.8em;
 }
 
-.fs-form-overview .cs-skin-boxes > span::before {
+.fs-form-overview .cs-skin-boxes>span::before {
   padding-top: 50px;
   box-shadow: 0 20px 0 #292c30, inset 0 -5px #292c30;
 }
@@ -437,6 +446,7 @@ button.fs-continue,
 }
 
 /* placeholder */
+
 .fs-fields input::-webkit-input-placeholder,
 .fs-fields textarea::-webkit-input-placeholder {
   color: rgba(0, 0, 0, 0.1);
@@ -458,11 +468,13 @@ button.fs-continue,
 }
 
 /* Hide placeholder when focused in Webkit browsers */
+
 .fs-fields input:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
 /* Dot navigation */
+
 .fs-nav-dots {
   position: absolute;
   top: 50%;
@@ -517,6 +529,7 @@ button.fs-continue,
 }
 
 /* Progress bar */
+
 .fs-progress {
   position: absolute;
   top: 0;
@@ -528,6 +541,7 @@ button.fs-continue,
 }
 
 /* Number indicator */
+
 .fs-numbers {
   position: absolute;
   top: 0;
@@ -570,7 +584,9 @@ button.fs-continue,
 }
 
 /* Animations for numbers */
+
 /* Show next number */
+
 .fs-numbers.fs-show-next .fs-number-new {
   -webkit-animation: animMoveUpFromDown 0.4s both;
   animation: animMoveUpFromDown 0.4s both;
@@ -615,6 +631,7 @@ button.fs-continue,
 }
 
 /* Show previous number */
+
 .fs-numbers.fs-show-prev .fs-number-new {
   -webkit-animation: animMoveDownFromUp 0.4s both;
   animation: animMoveDownFromUp 0.4s both;
@@ -659,6 +676,7 @@ button.fs-continue,
 }
 
 /* Continue button and submit button */
+
 button.fs-continue {
   padding: 0.6em 1.5em;
   border: 3px solid #232529;
@@ -679,8 +697,8 @@ button.fs-submit span {
 .no-js .fs-form .fs-submit {
   float: none !important;
   margin: 0 auto;
-	position: relative;
-	display: block;
+  position: relative;
+  display: block;
 }
 
 button.fs-continue {
@@ -711,6 +729,7 @@ button.fs-continue:hover {
 }
 
 /* Error message */
+
 .fs-message-error {
   position: absolute;
   bottom: 77%;
@@ -720,7 +739,7 @@ button.fs-continue:hover {
   width: 70%;
   color: #eb7e7f;
   font-weight: 700;
-	font-size: 1.35em;
+  font-size: 1.35em;
   opacity: 0;
   -webkit-transform: translate3d(-50%, -5px, 0);
   transform: translate3d(-50%, -5px, 0);
@@ -735,6 +754,7 @@ button.fs-continue:hover {
 }
 
 /* Animation classes & animations */
+
 .fs-form li.fs-current {
   visibility: visible;
 }
@@ -745,6 +765,7 @@ button.fs-continue:hover {
 }
 
 /* Hide current li when navigating to next question */
+
 .fs-form .fs-display-next .fs-hide {
   visibility: visible;
 }
@@ -776,6 +797,7 @@ button.fs-continue:hover {
 }
 
 /* Show new li when navigating to next question */
+
 .fs-form .fs-display-next .fs-show .fs-anim-lower,
 .fs-form .fs-display-next .fs-show .fs-anim-upper {
   -webkit-animation: animShowNext 0.5s cubic-bezier(0.7, 0, 0.3, 1) both 0.15s;
@@ -803,6 +825,7 @@ button.fs-continue:hover {
 }
 
 /* Hide current li when navigating to previous question */
+
 .fs-form .fs-display-prev .fs-hide {
   visibility: visible;
 }
@@ -834,6 +857,7 @@ button.fs-continue:hover {
 }
 
 /* Show new li when navigating to previous question */
+
 .fs-form .fs-display-prev .fs-show .fs-anim-lower,
 .fs-form .fs-display-prev .fs-show .fs-anim-upper {
   -webkit-animation: animShowPrev 0.5s cubic-bezier(0.7, 0, 0.3, 1) both 0.15s;
@@ -861,16 +885,17 @@ button.fs-continue:hover {
 }
 
 /* Remove IE clear cross */
+
 input[type="text"]::-ms-clear {
   display: none;
 }
 
 /* Adjust form for smaller screens */
+
 @media screen and (max-width: 52.5em) {
   body {
     min-height: 500px;
   }
-
   .fs-form {
     top: 0;
     right: 2em;
@@ -879,26 +904,21 @@ input[type="text"]::-ms-clear {
     width: auto;
     font-size: 2em;
   }
-
   .fs-form.fs-form-overview {
     top: 0;
     right: 0;
     padding: 1.5em 1em 8em 1em;
     font-size: 1.5em;
   }
-
   .fs-title {
     padding: 20px;
   }
-
   .fs-numbers {
     margin: 20px;
   }
-
   .fs-nav-dots {
     right: 25px;
   }
-
   button.fs-continue {
     right: 15px;
     bottom: 40px;
@@ -909,7 +929,6 @@ input[type="text"]::-ms-clear {
     border-radius: 50%;
     font-size: 2em;
   }
-
   button.fs-continue::before {
     position: absolute;
     top: 0;
@@ -921,11 +940,9 @@ input[type="text"]::-ms-clear {
     font-size: 1em;
     line-height: 50px;
   }
-
   .fs-continue::after {
     content: "";
   }
-
   .fs-message-error {
     bottom: 2em;
     left: 0;
@@ -935,7 +952,6 @@ input[type="text"]::-ms-clear {
     -webkit-transform: translate3d(0, -5px, 0);
     transform: translate3d(0, -5px, 0);
   }
-
   .fs-message-error.fs-show {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
