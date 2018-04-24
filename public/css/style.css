@@ -454,6 +454,7 @@ Large devices (large desktops, 1200px and up) */
   }
   .login-page input {
     width: 150px;
+    font-size: 28px;
   }
   .countdown-container {
     width: 120px;
