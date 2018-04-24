@@ -41,6 +41,10 @@ a {
   outline: none;
 }
 
+input {
+  border-radius: 0;
+}
+
 a:hover,
 a:focus {
   color: white;
@@ -450,7 +454,6 @@ Large devices (large desktops, 1200px and up) */
   }
   .login-page input {
     width: 150px;
-    font-size: 48px;
   }
   .countdown-container {
     width: 120px;
