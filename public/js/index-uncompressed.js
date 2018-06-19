@@ -21,19 +21,6 @@ $(document).ready(function () {
     });
   });
 
-  $("a.proposal-imgs").fancybox({
-    "hideOnContentClick": true,
-    "transitionIn": "elastic",
-    "transitionOut": "elastic",
-    "speedIn": 600,
-    "speedOut": 200,
-    "overlayShow": false
-  });
-
-  $(".submit-btn").on("click", function (e) {
-    // prevent redirect
-  });
-
   // Remove loading class from body
   $("body").removeClass("loading");
 
@@ -44,12 +31,6 @@ $(document).ready(function () {
   setTimeout(function () {
     $(".rsvp-btn").addClass("cool-color-effect");
   }, 2500);
-
-  $(".fs-continue").on("click", function () {
-    $("html, body").animate({
-      scrollTop: $(document).height() - $(window).height()
-    });
-  });
 
   $(".korean").click(function () {
     $(".korean-text").removeClass("hide-me");

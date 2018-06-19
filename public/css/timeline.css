@@ -128,6 +128,29 @@ header .social .btn {
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+
+#wedding-faq #timeline-container .timeline-item .timeline-content {
+  width: 93%;
+}
+
+#wedding-faq #timeline-container .timeline-item .timeline-icon {
+  left: 0;
+}
+
+#wedding-faq #timeline-container:before {
+  left: 10px;
+}
+
+#wedding-faq #timeline-container .timeline-item .timeline-content:before, #timeline-container .timeline-item .timeline-content.right:before {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  #wedding-faq #timeline-container:before {
+    left: 0;
+  }
+}
+
 #timeline-container .timeline-item .timeline-content h2 {
   padding: 15px;
   background: #fbf6eb;
@@ -221,7 +244,7 @@ header .social .btn {
 .wedding-timeline {
   color: black;
   background-color: #fce8ec;
-  height: auto;
+  height: auto !important;
 }
 
 .timeline-item img {
@@ -231,6 +254,13 @@ header .social .btn {
   margin: 10%;
 }
 
+.timeline-item.cash img {
+  width: 70%;
+  height: 70%;
+  margin: 15%;
+}
+
 .timeline-content p {
   margin: 15px 0 0;
+  font-size: 1.1em;
 }
